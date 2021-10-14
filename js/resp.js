@@ -14,12 +14,13 @@ var btn = document.getElementById('btn');
             btn.addEventListener('click',submitFunc = ()=> {
          
                 var firstname = document.getElementById("firstname").value || "";                      
-                var lastname = document.getElementById("lastName").value || "";
+                var lastname = document.getElementById("lastname").value || "";
                 var phone = document.getElementById("phone").value || "";
                 var email = document.getElementById("email").value || "";
               
 
                 console.log({firstname, lastname, phone, email});
+
 
                 webengage.user.login(email);
                 webengage.user.setAttribute('we_first_name', firstname);
